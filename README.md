@@ -82,32 +82,28 @@ MongoDB Database
 ## 💻 Tech Stack
 
 ### Frontend
-
-* React.js
-* Vite
-* Tailwind CSS
-* React Router v7
-* Axios
+- **Framework:** React.js (Bootstrapped with Vite)
+- **Styling:** Tailwind CSS, PostCSS
+- **Routing:** React Router v7
+- **HTTP Client:** Axios
 
 ### Backend
+- **Runtime:** Node.js
+- **Framework:** Express.js
+- **Database:** MongoDB (via Mongoose)
+- **Authentication:** jsonwebtoken, bcryptjs
+- **File Uploads:** Multer
+- **Mailing:** Nodemailer
 
-* Node.js
-* Express.js
+---
 
-### Database
+## 📋 Prerequisites
 
-* MongoDB
-* Mongoose
+Before you begin, ensure you have the following installed on your machine:
 
-### Authentication
-
-* JWT (jsonwebtoken)
-* bcryptjs
-
-### Additional Tools
-
-* Multer
-* Nodemailer
+- **[Node.js](https://nodejs.org/)** (v16.0.0 or higher)
+- **[MongoDB](https://www.mongodb.com/)** (Local instance or MongoDB Atlas account)
+- **[Git](https://git-scm.com/)**
 
 ---
 
@@ -132,16 +128,6 @@ KUCampusConnect/
 ├── README.md
 └── .gitignore
 ```
-
----
-
-## 📋 Prerequisites
-
-Before running the project, ensure you have:
-
-* Node.js (v16 or higher)
-* MongoDB (Local or Atlas)
-* Git
 
 ---
 
