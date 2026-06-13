@@ -11,34 +11,6 @@
 
 ---
 
-## 🌐 Live Demo
-
-Frontend: Coming Soon
-
-Backend API: Coming Soon
-
----
-
-## 📸 Screenshots
-
-### Login Page
-
-![Login](screenshots/login.png)
-
-### Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
-### Campus Feed
-
-![Feed](screenshots/feed.png)
-
-### Events Section
-
-![Events](screenshots/events.png)
-
----
-
 ## 🚀 Features
 
 ### 🔐 Authentication & Security
