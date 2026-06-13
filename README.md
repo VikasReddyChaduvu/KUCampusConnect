@@ -56,8 +56,8 @@ Follow these steps to get a local copy of the project up and running.
 ### 1. Clone the Repository
 Open your terminal and run:
 ```bash
-git clone https://github.com/nithishgangineni07/campus_connect.git
-cd campus_connect
+git clone https://github.com/VikasReddyChaduvu/KUCampusConnect.git
+cd CampusConnect
 ```
 *(Note: If your local directory is named differently, e.g., `campus_git_clone`, navigate to that directory instead).*
 
