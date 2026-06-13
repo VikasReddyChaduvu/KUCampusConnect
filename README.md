@@ -1,118 +1,302 @@
 # Campus Connect
 
-![Campus Connect](https://img.shields.io/badge/Status-Active-brightgreen)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![React](https://img.shields.io/badge/React-19-blue.svg)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-green.svg)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-green.svg)
+![JWT](https://img.shields.io/badge/JWT-Authentication-orange.svg)
 
-**Campus Connect** is a full-stack, internal social networking platform designed specifically for educational institutions. It provides a dedicated, secure space for students, faculty, and administrators to interact, share updates, form groups, and organize events within their campus community.
+**Campus Connect** is a full-stack social networking platform designed specifically for educational institutions. It provides a secure and collaborative environment where students, faculty, and administrators can interact, share updates, join groups, and manage campus events.
+
+---
+
+## 🌐 Live Demo
+
+Frontend: Coming Soon
+
+Backend API: Coming Soon
+
+---
+
+## 📸 Screenshots
+
+### Login Page
+
+![Login](screenshots/login.png)
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+### Campus Feed
+
+![Feed](screenshots/feed.png)
+
+### Events Section
+
+![Events](screenshots/events.png)
 
 ---
 
 ## 🚀 Features
 
-- **Role-Based Access Control:** Distinct roles and privileges for Admins, Faculty, and Students.
-- **User Authentication:** Secure login and registration using JWT (JSON Web Tokens) and bcrypt password hashing.
-- **Post Feed & Interactions:** Users can create posts, share images, and interact with a dynamic campus feed.
-- **Group Management:** Create and join interest-based or academic groups.
-- **Event Scheduling:** Organize, manage, and discover campus events.
-- **Email Notifications:** Integrated email notifications for account recovery and important updates (via Nodemailer).
-- **Responsive Design:** A modern, mobile-friendly user interface built with Tailwind CSS.
+### 🔐 Authentication & Security
+
+* JWT-based Authentication
+* Secure Password Hashing using bcrypt
+* Role-Based Access Control
+* Protected Routes
+
+### 👥 User Management
+
+* Student Profiles
+* Faculty Profiles
+* Administrator Controls
+* Profile Updates
+
+### 📝 Campus Feed
+
+* Create Posts
+* Share Updates
+* Upload Images
+* Like and Interact with Content
+
+### 👨‍👩‍👧‍👦 Group Management
+
+* Create Groups
+* Join Groups
+* Manage Group Members
+* Academic & Interest-Based Communities
+
+### 📅 Event Management
+
+* Create Campus Events
+* Manage Event Details
+* Event Discovery
+* Participation Tracking
+
+### 📧 Notifications
+
+* Password Recovery Emails
+* Account Notifications
+* Email Integration using Nodemailer
+
+### 📱 Responsive Design
+
+* Mobile-Friendly UI
+* Modern User Experience
+* Responsive Layouts
+
+---
+
+## 🏗️ System Architecture
+
+```text
+User
+  │
+  ▼
+React Frontend
+  │
+  ▼
+Express.js API
+  │
+  ▼
+MongoDB Database
+```
 
 ---
 
 ## 💻 Tech Stack
 
 ### Frontend
-- **Framework:** React.js (Bootstrapped with Vite)
-- **Styling:** Tailwind CSS, PostCSS
-- **Routing:** React Router v7
-- **HTTP Client:** Axios
+
+* React.js
+* Vite
+* Tailwind CSS
+* React Router v7
+* Axios
 
 ### Backend
-- **Runtime:** Node.js
-- **Framework:** Express.js
-- **Database:** MongoDB (via Mongoose)
-- **Authentication:** jsonwebtoken, bcryptjs
-- **File Uploads:** Multer
-- **Mailing:** Nodemailer
+
+* Node.js
+* Express.js
+
+### Database
+
+* MongoDB
+* Mongoose
+
+### Authentication
+
+* JWT (jsonwebtoken)
+* bcryptjs
+
+### Additional Tools
+
+* Multer
+* Nodemailer
+
+---
+
+## 📁 Project Structure
+
+```text
+KUCampusConnect/
+│
+├── client/
+│   ├── src/
+│   ├── public/
+│   └── package.json
+│
+├── server/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── uploads/
+│   └── package.json
+│
+├── README.md
+└── .gitignore
+```
 
 ---
 
 ## 📋 Prerequisites
 
-Before you begin, ensure you have the following installed on your machine:
+Before running the project, ensure you have:
 
-- **[Node.js](https://nodejs.org/)** (v16.0.0 or higher)
-- **[MongoDB](https://www.mongodb.com/)** (Local instance or MongoDB Atlas account)
-- **[Git](https://git-scm.com/)**
+* Node.js (v16 or higher)
+* MongoDB (Local or Atlas)
+* Git
 
 ---
 
-## 🛠️ Installation & Setup (How to Clone)
+## 🛠️ Installation & Setup
 
-Follow these steps to get a local copy of the project up and running.
+### 1. Clone Repository
 
-### 1. Clone the Repository
-Open your terminal and run:
 ```bash
 git clone https://github.com/VikasReddyChaduvu/KUCampusConnect.git
-cd CampusConnect
+cd KUCampusConnect
 ```
-*(Note: If your local directory is named differently, e.g., `campus_git_clone`, navigate to that directory instead).*
+
+---
 
 ### 2. Backend Setup
-Navigate to the `server` directory and install the dependencies:
+
+Navigate to the server directory:
+
 ```bash
 cd server
 npm install
 ```
 
-**Environment Variables:**
-Create a `.env` file in the `server` root directory and configure the following variables:
+Create a `.env` file:
+
 ```env
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
-EMAIL_USER=your_smtp_email_address
-EMAIL_PASS=your_smtp_email_password
+EMAIL_USER=your_email
+EMAIL_PASS=your_email_password
 ```
 
-**Run the Server:**
+Start the backend server:
+
 ```bash
 npm run dev
 ```
-The backend API should now be running on `http://localhost:5000`.
+
+Backend runs on:
+
+```text
+http://localhost:5000
+```
+
+---
 
 ### 3. Frontend Setup
-Open a new terminal window/tab, navigate to the `client` directory, and install the dependencies:
+
+Open a new terminal:
+
 ```bash
 cd client
 npm install
 ```
 
-**Environment Variables:**
-Create a `.env` file in the `client` root directory (if required) and add your backend API URL:
+Create a `.env` file:
+
 ```env
 VITE_API_BASE_URL=http://localhost:5000/api
 ```
 
-**Run the Client:**
+Run the frontend:
+
 ```bash
 npm run dev
 ```
-The frontend should now be running (usually on `http://localhost:5173`). Open this URL in your browser to view the application.
+
+Frontend runs on:
+
+```text
+http://localhost:5173
+```
 
 ---
 
-## 👨‍💻 Contributing
+## 📚 What I Learned
 
-Contributions, issues, and feature requests are welcome!
+Through this project, I gained practical experience in:
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+* MERN Stack Development
+* REST API Design
+* JWT Authentication
+* MongoDB Data Modeling
+* Role-Based Access Control
+* File Upload Management
+* Email Service Integration
+* Full-Stack Application Development
+* Git & GitHub Workflow
+
+---
+
+## 🚀 Future Enhancements
+
+* Real-Time Chat using Socket.IO
+* Push Notifications
+* Video Conferencing
+* Mobile Application
+* AI-Based Recommendations
+* Advanced Search & Filtering
+* Event Analytics Dashboard
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+
+```bash
+git checkout -b feature/AmazingFeature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add Amazing Feature"
+```
+
+4. Push to GitHub
+
+```bash
+git push origin feature/AmazingFeature
+```
+
 5. Open a Pull Request
 
 ---
@@ -120,3 +304,11 @@ Contributions, issues, and feature requests are welcome!
 ## 📝 License
 
 Distributed under the MIT License.
+
+---
+
+## ⭐ Support
+
+If you found this project useful, consider giving it a star on GitHub.
+
+⭐ Star the repository to support the project.
